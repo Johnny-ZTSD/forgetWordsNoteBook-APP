@@ -1,0 +1,38 @@
+<!--pages/word/word.wxml-->
+<view class='head'>
+  <view class='searchBar'>
+    <icon type='search' size='16' color='#333'></icon>
+    <input type='text'></input>
+  </view>
+  <view class='cancel' bindtap='cancel'>取消</view>
+</view>
+<view class='row1'>
+  <view class='wordMeaning'>
+    <view>
+      <view class='word'>family</view>
+      <view>/'famely/</view>
+    </view>
+    <view>n.家庭</view>
+  </view>
+  <view class='markNew'>添生词</view>
+</view>
+<view class='row2'>
+  <view class='Example'>例句</view>
+  <view>
+    <view>We are a family.</view>
+    <view>我们都是一家人。</view>
+  </view>
+  <view>
+  <view>They decided to start a family.</view>
+  <view>他们决定要一个孩子。</view>
+  </view>
+</view>
+<view class='row3'>
+详细释义
+</view>
+<view class='row4'>
+下一单词：fame
+</view>
+<view class='row5' bindtap='back'>
+返回
+</view>

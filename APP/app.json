@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index",    
+    "pages/searchResult/searchResult",    
+    "pages/reciteword/reciteword",
+    "pages/word/word",
+    "pages/logs/logs"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "生词本",
+    "navigationBarTextStyle":"black"
+  }
+}

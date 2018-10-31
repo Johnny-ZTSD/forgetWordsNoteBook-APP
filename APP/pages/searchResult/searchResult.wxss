@@ -1,0 +1,57 @@
+/* pages/searchResult/searchResult.wxss */
+.searchBar {
+  padding: 20rpx;
+  width: 580rpx;
+  height: 48rpx;
+  background-color: #fff;
+  border-radius: 68rpx;
+  display: flex;
+  align-items: center;
+}
+.cancel {
+  text-align: center;
+  width: 100rpx;
+  font-size: 36rpx;
+  color: #797979;
+  font-weight: bolder;
+}
+.wordIfo {
+  margin: 10rpx auto;
+  width: 100%;
+  /* height: 116rpx; */
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wordManing {
+  font-size: 16px;
+  margin-left: 20rpx;
+  width: 600rpx;
+}
+.word {
+  font-weight: bolder;
+}
+.pronunciation {
+
+}
+.markNew {
+  height: 42rpx;
+  width: 118rpx;
+  font-size: 12px;
+  line-height: 42rpx;
+  text-align: center;
+  background-color: #000;
+  border-radius: 118rpx;
+  color: #fff;
+}
+.forget {
+  height: 42rpx;
+  width: 118rpx;
+  font-size: 12px;
+  line-height: 42rpx;
+  text-align: center;
+  background-color: red;
+  border-radius: 118rpx;  
+  color: #fff;
+}

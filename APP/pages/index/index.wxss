@@ -1,0 +1,110 @@
+/* pages/index/index.wxss */
+
+.w {
+  width: 710rpx;
+  margin: 16px auto;
+}
+
+#headImg {
+  margin-right: 30rpx;
+  width: 96rpx;
+  height: 96rpx;
+}
+
+#searchBar {
+  padding: 5px;
+  width: 580rpx;
+  height: 68rpx;
+  background-color: #c9c9c9;
+  border-radius: 68rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+#iconStyle {
+  width: 140rpx;
+  height: 68rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.task {
+  height: 542rpx;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskContent {
+  width: 530rpx;
+  height: 400rpx;
+}
+
+.row1 {
+  height: 204rpx;
+}
+
+.row2 {
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.lave {
+  width: 290rpx;
+  height: 100%;
+  display: inline-block;
+}
+
+.new {
+  height: 100%;
+  display: inline-block;
+}
+
+.mark {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.data {
+  font-size: 54px;
+  font-weight: bolder;
+}
+
+.highForge {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.hightData {
+  margin: 0 20rpx;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.start {
+  background-color: #169bd5;
+  height: 102rpx;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 102rpx;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.random {
+  background-color: #fff;
+  height: 102rpx;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 102rpx;
+  color: #169bd5;
+  font-weight: bolder;
+}
