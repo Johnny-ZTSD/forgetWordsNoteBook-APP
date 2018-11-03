@@ -1,0 +1,14 @@
+<!--pages/login_page/login_page.wxml-->
+<view class='row'>
+  <view class='info'>
+    <input class='info-input' bindinput="InputEmail" placeholder="请输入你的邮箱地址" />
+  </view>
+</view>
+<view class='row'>
+  <view class='info'>
+    <input type='password' class='info-input' bindinput="InputPassword" placeholder="请输入你的密码" />
+  </view>
+</view>
+<view>
+  <button class='submit' bindtap='submit'>登录</button>
+</view>
