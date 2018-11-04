@@ -14,7 +14,7 @@
   flex-direction: row;
   margin-top:10px; 
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-; */
 }
 
 .userinfo {
@@ -22,7 +22,7 @@
   flex-direction: row;
   justify-content: space-around;
   width: 500rpx;
-  margin-left: -30px;
+  margin-left: 5px;
 }
 
 .userinfo-avatar {
@@ -35,7 +35,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  
+
 }
 
 .userinfo-name-sex{
@@ -87,4 +87,4 @@
 .back-box{
   height: 90rpx;
   color: #ea5862;
-} 
+}
