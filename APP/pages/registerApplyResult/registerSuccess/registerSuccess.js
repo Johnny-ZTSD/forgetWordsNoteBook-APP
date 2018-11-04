@@ -9,7 +9,7 @@ Page({
   },
   toLogin: function() {
     wx.redirectTo({
-      url: '../../ login / loginPage/loginPage',
+      url: '/pages/login/login',
     })
   },
   /**
