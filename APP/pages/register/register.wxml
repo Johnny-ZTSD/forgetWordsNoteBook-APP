@@ -1,6 +1,9 @@
 <!--pages/register/register.wxml-->
 <!--pages/registe/registe.wxml-->
 <view wx:if="{{!success}}">
+<view class='top'>
+  <text id='top'>注册</text>
+</view>
   <view class='row'>
     <view class='info'>
       <input class='info-input1' bindinput="inputNewEmail" placeholder="请输入你的邮箱地址" />
