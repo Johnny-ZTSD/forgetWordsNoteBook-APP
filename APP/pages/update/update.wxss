@@ -1,0 +1,38 @@
+/* pages/update/update.wxss */
+.update-box{
+  height: 1070rpx;
+  background-color: #f4f5f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.update-infor{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-update{
+  width: 600rpx;
+  /* background-color: pink; */
+  margin-left: 5px;
+}
+
+.binSave{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.hint{
+  color: #ccc;
+  font-size: 12px;
+  margin-left: 5px;
+}

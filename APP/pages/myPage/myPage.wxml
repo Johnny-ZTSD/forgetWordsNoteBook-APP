@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='box'>
+    <view class='header'>
+      <view class="userinfo" bindtap='bindUserInfor'>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <view class="infor">
+          <view class='userinfo-name-sex'>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            <image class='sexImg' src='{{userInfo.sex}}'></image>
+          </view>
+          <text class="userinfo-email">{{userInfo.email}}</text>
+        </view>
+      </view>
+      <view class="note">
+        <image class='noteImg' bindtap='onChangeShowState' src="../../../images/note.png"></image>
+        <view class="note-hidden{{showView?'note-show':''}}">
+          <view class="note-infor">
+            <view class='note-hidden-top'>
+              <image class='cancleImg' src='../../../images/cancle.png'></image>
+            </view>
+            <text class="note-word">note</text>
+            <text class='note-word-detail'>返回上一页，可能是首页也可能是上一单词页</text>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+    <view class="set-box">
+      <view class='setInfor'>
+        <image class='setImg' src='../../../images/set.png'></image>
+        <text>设置</text>
+      </view>
+    </view>
+
+    <view class="set-box back-box">
+      <view class='back-login'>
+        <text bindtap='BinQuitLogin'>退出登录</text>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,16 +1,35 @@
 {
   "pages":[
-    "pages/index/index",    
-    "pages/searchResult/searchResult",    
+    "pages/index/index",
+    "pages/searchResult/searchResult",
     "pages/reciteword/reciteword",
     "pages/word/word",
-    "pages/logs/logs"
-    
+    "pages/logs/logs",
+    "pages/update/update",
+    "pages/userInfor/userInfor",
+    "pages/myPage/myPage"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "生词本",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/myPage/myPage",
+        "text": "个人中心",
+        "iconPath": "./images/yh.png",
+        "selectedIconPath": "./images/yh_selected.png"
+      }
+    ]
   }
+
 }

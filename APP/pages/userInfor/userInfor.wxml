@@ -1,0 +1,43 @@
+<!--pages/userInfor/userInfor.wxml-->
+<view class="container">
+  <view class='userInfor-box'>
+    <view class='userInfor'>
+    <!-- 头像 -->
+      <view class='infor-item'>
+        <view class="infor-type">头像</view>
+        <view class='infor-detail'>
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+         <text class='detail-arrow'>></text>
+      </view>
+      <!-- 昵称 -->
+      <view class='infor-item itemTwo' bindtap='binChangeNickname'>
+        <view class="infor-type">昵称</view>
+        <view class='infor-detail'>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+         <text class='detail-arrow'>></text>
+      </view>
+      <!-- 性别 -->
+      <view class='infor-item itemTwo'>
+        <view class="infor-type">性别</view>
+        <view class='infor-detail'>
+          <text class="userinfo-sex sex-arrow">{{userInfo.sex}}</text>
+        </view>
+         <text class='detail-arrow'>></text>
+      </view>
+      <!-- 邮箱 -->
+      <view class='infor-item itemTwo'>
+        <view class="infor-type">邮箱</view>
+        <view class='infor-detail'>
+          <text class="userinfo-email">{{userInfo.email}}</text>
+        </view>
+         <text class='detail-arrow '>></text>
+      </view>
+    </view>
+    <!-- 修改信息 -->
+    <view class="updateInfor">
+       修改
+    </view>
+  </view>
+</view>

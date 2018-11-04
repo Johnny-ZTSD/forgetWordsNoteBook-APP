@@ -1,0 +1,80 @@
+/* pages/userInfor/userInfor.wxss */
+
+.userInfor-box {
+  height: 1070rpx;
+  background-color: #f4f5f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfor {
+  width: 750rpx;
+  background-color: #fff;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infor-item {
+  width: 750rpx;
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e2e4e3;
+
+}
+
+.infor-type {
+  color: #333;
+  margin-left: 5px;
+}
+
+.userinfo-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.infor-detail{
+  font-size: 14px;
+}
+.detail-arrow{
+  color: #ccc;
+  margin-left: -200px;
+  margin-right: 5px;
+}
+
+.itemTwo{
+  height: 100rpx;
+}
+
+.userinfo-nickname {
+  color: #ccc;
+}
+
+.userinfo-sex{
+  color: #ccc;
+  margin-left: 40px;
+}
+
+
+
+.userinfo-email {
+  color: #ccc;
+  margin-right: 85px;
+}
+
+.updateInfor{
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #fff;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2ca1df;
+}
+
+

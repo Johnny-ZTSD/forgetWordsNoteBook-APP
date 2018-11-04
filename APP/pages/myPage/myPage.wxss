@@ -1,0 +1,144 @@
+/**index.wxss**/
+.box{
+  height: 1070rpx;
+  background-color: #f4f5f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  width: 750rpx;
+  height: 165rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  margin-top:10px; 
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 500rpx;
+  margin-left: -30px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.infor{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.userinfo-name-sex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.userinfo-nickname {
+  color: #333;
+  font-weight: bold;
+}
+
+.sexImg{
+  width: 25px;
+  height: 25px;
+}
+
+.userinfo-email {
+  color: #999;
+  font-size: 14px;
+}
+
+.note{
+  /* background-color: pink; */
+  position: relative;
+}
+
+.noteImg{
+   position: absolute;
+   width: 20px;
+   height: 20px;
+}
+
+.note-show{
+  display: block;
+}
+
+.note-hidden{
+    display: none;
+}
+
+.note-infor{
+  position: absolute;
+  width: 530rpx;
+  height: 200rpx;
+  top: 22px;
+  right: -40rpx;
+  background-color: #fff;
+  border: 1px solid #8f949a;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-hidden-top{
+  width: 100%;
+  height: 15px;
+  background-color: #8f949a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cancleImg{
+  width: 14px;
+  height: 14px;
+}
+
+.note-word-detail{
+  font-size: 10px;
+  color: #777777;
+}
+
+.set-box{
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #fff;
+  margin-top: 10px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.setInfor{
+  width: 700rpx;
+  /* background-color: pink; */
+   display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.setImg{
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.back-box{
+  height: 90rpx;
+  color: #ea5862;
+} 
+
+
