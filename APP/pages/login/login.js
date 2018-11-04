@@ -51,13 +51,13 @@ Page({
       })
     }  else {
       wx.request({
-        url: ' http://johnnyzen.cn:8080/forget-words-notebook/login/api ',
+        url: 'http://johnnyzen.cn:8080/forget-words-notebook/login/api',
         data: {
           username: this.data.UserName,
           password: this.data.Password,
         },
         header: {
-          'content-type': 'application/json'
+          'Content-Type': 'application/json'
         },
         method: 'POST',
         success: function (res) {

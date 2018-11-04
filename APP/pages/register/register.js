@@ -62,14 +62,14 @@ Page({
       })
     } else {
         wx.request({
-          url: ' http://johnnyzen.cn:8080/forget-words-notebook/register/api ',
+          url: 'http://johnnyzen.cn:8080/forget-words-notebook/register/api',
           data:{
             username:this.data.NewUserName,
             password:this.data.NewPassword,
             email:this.data.NewEmail,
           },
           header: {
-            'content-type': 'application/json'
+            'Content-Type': 'application/json'
           },
           method: 'POST',
           success:function(res){
