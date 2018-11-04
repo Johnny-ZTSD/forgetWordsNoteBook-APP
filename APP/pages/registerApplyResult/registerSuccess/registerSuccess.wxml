@@ -1,7 +1,7 @@
 <!--pages/registerApplyResult/registerSuccess/registerSuccess.wxml-->
 <view class='contains'>
   <view class='info'>
-    <text id='success'>注册成功！</text>
+    <text id='success'>注册成功！请查收激活邮件并激活账号.</text>
   </view>
   <view class='view'>
     <button class='submit' bindtap='toLogin'>去登录</button>
