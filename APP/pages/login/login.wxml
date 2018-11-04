@@ -5,7 +5,7 @@
     <text id='logoText'>忘词本</text>
   </view>
   <view class='info'>
-    <input class='info-input' bindinput="InputEmail" placeholder="用户名或邮箱" />
+    <input class='info-input' bindinput="InputUserName" placeholder="用户名或邮箱" />
   </view>
 </view>
 <view class='row'>
