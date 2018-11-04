@@ -59,58 +59,6 @@
   font-size: 14px;
 }
 
-.note{
-  /* background-color: pink; */
-  position: relative;
-}
-
-.noteImg{
-   position: absolute;
-   width: 20px;
-   height: 20px;
-}
-
-.note-show{
-  display: block;
-}
-
-.note-hidden{
-    display: none;
-}
-
-.note-infor{
-  position: absolute;
-  width: 530rpx;
-  height: 200rpx;
-  top: 22px;
-  right: -40rpx;
-  background-color: #fff;
-  border: 1px solid #8f949a;
-  font-size: 12px;
-  display: flex;
-  flex-direction: column;
-}
-
-.note-hidden-top{
-  width: 100%;
-  height: 15px;
-  background-color: #8f949a;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.cancleImg{
-  width: 14px;
-  height: 14px;
-}
-
-.note-word-detail{
-  font-size: 10px;
-  color: #777777;
-}
-
 .set-box{
   width: 750rpx;
   height: 80rpx;
@@ -140,5 +88,3 @@
   height: 90rpx;
   color: #ea5862;
 } 
-
-

@@ -27,10 +27,10 @@ Page({
   },
 
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  binMyPage: function() {
+      wx.navigateTo({
+          url: '../myPage/myPage'
+      })
   },
   onLoad: function (options) {
     var that = this;//=====注意此处，要用that 指代this=====

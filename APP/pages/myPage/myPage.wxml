@@ -12,19 +12,6 @@
           <text class="userinfo-email">{{userInfo.email}}</text>
         </view>
       </view>
-      <view class="note">
-        <image class='noteImg' bindtap='onChangeShowState' src="../../../images/note.png"></image>
-        <view class="note-hidden{{showView?'note-show':''}}">
-          <view class="note-infor">
-            <view class='note-hidden-top'>
-              <image class='cancleImg' src='../../../images/cancle.png'></image>
-            </view>
-            <text class="note-word">note</text>
-            <text class='note-word-detail'>返回上一页，可能是首页也可能是上一单词页</text>
-          </view>
-        </view>
-
-      </view>
     </view>
 
     <view class="set-box">
@@ -40,5 +27,4 @@
       </view>
     </view>
   </view>
-
 </view>

@@ -1,6 +1,6 @@
 <!--pages/index/index.wxml-->
 <view class='head w'>
-  <image id='headImg' src='{{headImg}}'></image>
+  <image id='headImg' bindtap='binMyPage' src='{{headImg}}'></image>
   <view id='searchBar' bindtap='searchWord'>
     <view id='iconStyle'>
       <icon type='search' color='#fff' size='14'></icon>
