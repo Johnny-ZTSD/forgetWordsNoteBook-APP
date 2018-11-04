@@ -1,0 +1,21 @@
+<!--pages/login_index/login_index.wxml-->
+<view class='row'>
+  <view class='logo'>
+    <image mode='aspectFit 'src='/images/logo.jpg' id='logo'></image>
+    <text id='logoText'>忘词本</text>
+  </view>
+  <view class='info'>
+    <input class='info-input' bindinput="InputEmail" placeholder="用户名或邮箱" />
+  </view>
+</view>
+<view class='row'>
+  <view class='info'>
+    <input type='password' class='info-input' bindinput="InputPassword" placeholder="请输入你的密码" />
+  </view>
+</view>
+<view class='info'>
+  <text class='register' bindtap='ToRegisterPage'>注册，了解一下?</text>
+</view>
+<view>
+  <button class='submit' bindtap='submit'>登录</button>
+</view>
