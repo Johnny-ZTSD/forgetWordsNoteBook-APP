@@ -7,10 +7,16 @@
    color: #FFFFFF;
 }
 .info{
+  align-self: center;
   position: relative;
   width: 400rpx;
   height: 200rpx;
   text-align: center;
   line-height: 200rpx;
   justify-content: center;
+  padding-left: 200rpx;
+  
+}
+#failed{
+  font-size: 50rpx;
 }

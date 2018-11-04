@@ -1,7 +1,7 @@
 <!--pages/registerApplyResult/registerFailed/registerFailed.wxml-->
 <view class='contains'>
   <view class='info'>
-    <text>注册失败！</text>
+    <text id='failed'>注册失败！</text>
   </view>
   <view class='view'>
     <button class='submit' bindtap='toRegister'>返回注册页面</button>

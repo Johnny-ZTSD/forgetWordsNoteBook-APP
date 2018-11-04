@@ -7,10 +7,10 @@
    color: #FFFFFF;
 }
 .info{
-  position: relative;
-  width: 400rpx;
-  height: 200rpx;
+  padding-bottom: 50rpx;
+  padding-top:50rpx; 
   text-align: center;
-  line-height: 200rpx;
-  justify-content: center;
+}
+#success{
+  font-size: 35rpx;
 }

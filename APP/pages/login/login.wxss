@@ -1,5 +1,4 @@
-/* pages/register/register.wxss */
-/* pages/registe/registe.wxss */
+/* pages/login_index/login_index.wxss */
 page{
    background: #F0F0F0 ;
 }
@@ -57,14 +56,31 @@ page{
 }
 .return{
   margin: 20rpx;
+ 
 }
-.top{
-  background-color: black;
-  text-align: center;
-}
-#top{
-  text-align: center;
+.register{
   position: relative;
-  color: white;
-  font-size: 75rpx;
+  float: right;
+  text-align: right;
+  font-size: 30rpx;
+  font-family:  fantasy;
+  color:  coral
+}
+#logo{
+  position: relative;
+  width: 175rpx;
+  height: 175rpx;
+  padding-left: 125rpx;
+  padding-top: 75rpx;
+}
+#logoText{
+  position: relative;
+  float: right;
+  font-size: 100rpx;
+  font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:  coral;
+  font-weight: bolder;
+  padding-right: 100rpx;
+  padding-top: 100rpx;
+
 }
