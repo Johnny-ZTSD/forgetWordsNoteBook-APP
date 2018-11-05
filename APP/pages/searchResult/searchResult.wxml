@@ -6,13 +6,13 @@
   </view>
   <view class='cancel' bindtap='cancel'>取消</view>
 </view>
-<view class='wordIfo' wx:for="{{words}}" wx:key="word">
+<view class='wordIfo' wx:for="{{words}}" wx:key="id">
   <view class='wordManing' bindtap='wordTo'>
     <view>
-      <view class='word'>{{item.word}}</view>
-      <view class='pronunciation'>{{item.pronunciation}}</view>
+      <view class='word'>{{item.englishWord}}</view>
+      <view class='pronunciation'></view>
     </view>
-    <view>{{item.meaning}}</view>
+    <view>{{item.chineseTranslate}}</view>
   </view>
   <view class='markNew' wx:if="{{item.state}}" data-word='{{item.word}}' bindtap='addWord'>添生词</view>
   <view class='forget' wx:else="{{item.state}}">又忘啦</view>
