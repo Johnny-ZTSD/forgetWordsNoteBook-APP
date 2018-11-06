@@ -1,6 +1,46 @@
 //app.js
 App({
+   globalData: {
+    state: ''
+  },
   onLaunch: function () {
+     //登录流程
+    //获取openid 等信息并存储数据
+    wx.login({
+      success: function(res) {
+        if (res.code) {
+          //小程序第一次发起网络请求
+          wx.request({
+            url: 'http://johnnyzen.cn:8080/forget-words-notebook/login/api',
+            data: {
+              email: '13730665779@163.com',
+              password: '123456',
+              code: res.code,
+            },
+            method: "POST",
+            header: {
+              'content-type': 'application/x-www-form-urlencoded'
+            },
+            success: function(res) {
+              console.log(res.data)
+              var token = res.data.data.token;
+              var wxSession = res.data.data.sessionId;
+              var logoUrl = res.data.data.logoUrl;
+              //存储缓存数据
+              //服务器的session_id值
+              wx.setStorageSync('wxSession', wxSession);
+              //3rd_session
+              wx.setStorageSync('token', token);
+              wx.setStorageSync('logoUrl', logoUrl);
+              //存储成功后设置全局登录状态
+              // that.globalData.wxlogin = true
+            }
+          })
+        } else {
+          console.log('获取用户登录态失败！' + res.errMsg)
+        }
+      }
+    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
