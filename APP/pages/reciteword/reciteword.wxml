@@ -1,6 +1,6 @@
 <!--pages/reciteword/reciteword.wxml-->
 <view class='box'>
-<view class='word'>forget</view>
+<view class='word'>{{englishWord[0].englishWord}}</view>
 <view class='pronunciation'>/'for'get/</view>
 </view>
 <view class='action'>
