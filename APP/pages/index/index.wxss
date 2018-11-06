@@ -23,9 +23,12 @@
   color: #fff;
   font-size: 18px;
 }
+.searchText {
+  margin: 0 20rpx 0 10rpx;
+}
 
 #iconStyle {
-  width: 140rpx;
+  width: 180rpx;
   height: 68rpx;
   display: flex;
   justify-content: space-around;
