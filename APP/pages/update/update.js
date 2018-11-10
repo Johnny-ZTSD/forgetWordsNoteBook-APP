@@ -1,66 +1,41 @@
 // pages/update/update.js
+const app = getApp()
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    nickname: ""
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  binSave: function(e) {
+    console.log(e.detail.value['nickname']);
+    // // nickname = e.detail.value['nickname'];
+    // console.log(nickname)
+    wx.request({
+        url: 'http://johnnyzen.cn:8080/forget-words-notebook/updateUserInfo/api ',
+        data: {
+          username: e.detail.value['nickname']
+        },
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'Cookie': 'JSESSIONID=' + wx.getStorageSync('wxSession')
+        },
+        success: function(res) {
+          that.setData({ //这里是修改data的值  
+            test: res.data //test等于服务器返回来的数据  
+          });
+          console.log(res.data)
+        }
+      })
+      wx.navigateTo({
+        url: '../userInfor/userInfor',
+      })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  onLoad: function(options) {
+    this.setData({
+      nickname: app.globalData.userInfo.username,
+    })
+    wx.setNavigationBarTitle({
+      title: '修改昵称',
+    })
   }
 })
