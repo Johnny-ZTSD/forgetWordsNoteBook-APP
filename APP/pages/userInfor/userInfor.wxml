@@ -2,42 +2,48 @@
 <view class="container">
   <view class='userInfor-box'>
     <view class='userInfor'>
-    <!-- 头像 -->
+      <!-- 头像 -->
       <view class='infor-item' bindtap='binChangeAvatar'>
-        <view class="infor-type">头像</view>
+        <view class="infor-type">头 像</view>
         <view class='infor-detail'>
-          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+          <image wx:if="{{imgUrl!=null}}" class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
+          <image wx:else class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
         </view>
-         <text class='detail-arrow'>></text>
+        <text class='detail-arrow'>></text>
       </view>
       <!-- 昵称 -->
       <view class='infor-item itemTwo' bindtap='binChangeNickname'>
-        <view class="infor-type">昵称</view>
+        <view class="infor-type">昵 称</view>
         <view class='infor-detail'>
-          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <text class="userinfo-nickname">{{nickName}}</text>
         </view>
-         <text class='detail-arrow'>></text>
+        <text class='detail-arrow'>></text>
       </view>
       <!-- 性别 -->
       <view class='infor-item itemTwo' bindtap='binChangeSex'>
-        <view class="infor-type">性别</view>
+        <view class="infor-type">性 别</view>
         <view class='infor-detail'>
-          <text class="userinfo-sex sex-arrow">{{userInfo.sex}}</text>
+          <text class="userinfo-sex sex-arrow">{{sex}}</text>
         </view>
-         <text class='detail-arrow'>></text>
+        <text class='detail-arrow'>></text>
       </view>
       <!-- 邮箱 -->
       <view class='infor-item itemTwo'>
-        <view class="infor-type">邮箱</view>
+        <view class="infor-type">邮 箱</view>
         <view class='infor-detail'>
-          <text class="userinfo-email">{{userInfo.email}}</text>
+          <text class="userinfo-email">{{email}}</text>
         </view>
-         <text class='detail-arrow '>></text>
+        <text class='detail-arrow '>></text>
+      </view>
+      <!-- 密码 -->
+      <view class='infor-item itemTwo' bindtap='binResetPassword'>
+        <view class="infor-type">密 码</view>
+        <view class='infor-detail'>
+          <input class='userinfoPassword' type="password" value='{{password}}' />
+        </view>
+        <text class='detail-arrow password-arrow'>></text>
       </view>
     </view>
-    <!-- 修改信息 -->
-    <view class="updateInfor" bindtap='binResetPassword'>
-       重置密码
-    </view>
+
   </view>
 </view>
