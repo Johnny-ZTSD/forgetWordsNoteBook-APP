@@ -5,8 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    UserName:'',
-    Password:'',
+    UserName: '',
+    Password: '',
+
 
   },
 
@@ -22,24 +23,32 @@ Page({
       url: '/pages/register/register',
     })
   },
-  InputUserName: function (e) {
+  InputAccount: function(e) {
     this.setData({
       UserName: e.detail.value
     })
   },
-  InputPassword:function(e){
+  InputPassword: function(e) {
     this.setData({
-      Password:e.detail.value
+      Password: e.detail.value
     })
   },
-
+  CheckEmail: function(str) {
+    var re = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/
+    signal = false
+    if (account.test(str)) {
+      signal = true
+    } else {
+      signal = false
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
 
   },
-  submit: function (e) {
+  submit: function(e) {
     var that = this
     if (this.data.UserName == '') {
       wx.showToast({
@@ -49,24 +58,58 @@ Page({
       wx.showToast({
         title: '请输入密码'
       })
-    }  else {
+    } else if (this.data.UserName.CheckEmail = true) {
       wx.request({
         url: 'http://johnnyzen.cn:8080/forget-words-notebook/login/api',
-        data: {
-          username: this.data.UserName,
-          password: this.data.Password,
+        header: {
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
+        method: 'POST',
+        data: {
+          email: that.data.UserName,
+          password: that.data.Password
+        },
+        success: function(res) {
+          console.log('登录:');
+          console.log(res.data)
+          var token = res.data.data.token;
+          var wxSession = res.data.data.sessionId;
+          var logoUrl = res.data.data.logoUrl;
+          //存储缓存数据
+          wx.setStorageSync('wxSession', wxSession);
+          wx.setStorageSync('token', token);
+          wx.setStorageSync(key, data)('logoUrl', logoUrl)
+        },
+        fail: function(err) {
+          console.log(err);
+          wx.showToast({
+            title: '用户名或密码错误',
+          })
+        },
+      })
+    } else {
+      wx.request({
+        url: 'http://johnnyzen.cn:8080/forget-words-notebook/login/api',
         header: {
           'Content-Type': 'application/json'
         },
         method: 'POST',
-        success: function (res) {
-          console.log(res.data);
-          wx.redirectTo({
-            url: '',//跳转至用户首页
-          })
+        data: {
+          email: that.data.account,
+          password: that.data.password
         },
-        fail: function (err) {
+        success: function(res) {
+          console.log('登录:');
+          console.log(res.data)
+          var token = res.data.data.token;
+          var wxSession = res.data.data.sessionId;
+          var logoUrl = res.data.data.logoUrl;
+          //存储缓存数据
+          wx.setStorageSync('wxSession', wxSession);
+          wx.setStorageSync('token', token);
+          wx.setStorageSync(key, data)('logoUrl', logoUrl)
+        },
+        fail: function(err) {
           console.log(err);
           wx.showToast({
             title: '用户名或密码错误',
