@@ -1,13 +1,13 @@
+<!--pages/chageSex/chageSex.wxml-->
 <view class='containter'>
-  <form bindsubmit="formSubmit" id='2'>
-    <input style='display:none' name='program_id' value='{{program_id}}'></input>
-    <view class="big-logos">
-      <image bindtap="upimg" src='../../images/addAvatar.png'></image>
-        <view class='logoinfo'>
-          <image src='{{img_arr[0]}}'></image>
-        </view>
-      <!-- </block> -->
+  <form bindsubmit="binSaveSex">
+    <view class='update-infor'>
+      <radio-group class="radio-group" bindchange="radioChange" name="sex">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}"  checked="{{item.checked}}" />{{item.value}}
+        </label>
+      </radio-group>
+     <button  form-type="submit" class="updata-button"><image class='binSave' src='../../../images/save.png'></image></button>
     </view>
-    <button class='btn' formType="submit">发布</button>
   </form>
 </view>
