@@ -1,9 +1,0 @@
-<!--pages/login_index/login_index.wxml-->
-<view class='contains'>
-  <view class='button'>
-    <button id='login' bindtap='ToLoginPage'>登录</button>
-  </view>
-  <view class='button'>
-    <button id='register' bindtap='ToRegisterPage'>注册</button>
-  </view>
-</view>
