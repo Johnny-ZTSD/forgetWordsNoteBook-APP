@@ -21,3 +21,10 @@
   height: 20px;
   margin-right: 10px;
 }
+
+.updata-button{
+  width: 45px;
+  height: 29px;
+  margin-right: 1px;
+  background: transparent;
+}
