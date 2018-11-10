@@ -1,0 +1,22 @@
+/* pages/registerApplyResult/registerFailed/registerFailed.wxss */
+.submit{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  background: #00CCFF;
+   color: #FFFFFF;
+}
+.info{
+  align-self: center;
+  position: relative;
+  width: 400rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  justify-content: center;
+  padding-left: 200rpx;
+  
+}
+#failed{
+  font-size: 50rpx;
+}

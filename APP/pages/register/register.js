@@ -75,13 +75,13 @@ Page({
           success:function(res){
             console.log(res.data);
             wx.redirectTo({
-              url: '/pages/registerApplyResult/registerSuccess/registerSuccess',
+              url: '/pages/registerSuccess/registerSuccess',
             })
           },
           fail:function(err){
             console.log(err);
             wx.redirectTo({
-              url: '/pages/registerApplyResult/registerFailed/registerFailed',
+              url: '/pages/registerFailed/registerFailed',
             })
           },
         })
