@@ -3,13 +3,21 @@
   <view class='box'>
     <view class='header'>
       <view class="userinfo" bindtap='bindUserInfor'>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
         <view class="infor">
           <view class='userinfo-name-sex'>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-            <image class='sexImg' src='{{userInfo.sex}}'></image>
+            <text class="userinfo-nickname">{{name}}</text>
+            <view wx:if="{{sex==U}}">
+              <text>未设置</text>
+            </view>
+            <view wx:elif="{{sex==F}}">
+              <image class='sexImg' src='{{sexImg[0]}}'></image>
+            </view>
+            <view wx:else>
+              <image class='sexImg' src='{{sexImg[1]}}'></image>
+            </view>
           </view>
-          <text class="userinfo-email">{{userInfo.email}}</text>
+          <text class="userinfo-email">{{email}}</text>
         </view>
       </view>
     </view>
@@ -23,8 +31,9 @@
 
     <view class="set-box back-box">
       <view class='back-login'>
-        <text bindtap='BinQuitLogin'>退出登录</text>
+        <text bindtap='dropOut'>退出登录</text>
       </view>
     </view>
   </view>
+
 </view>
