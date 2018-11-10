@@ -1,56 +1,46 @@
-var adds = {};
+// pages/chageSex/chageSex.js
+const app = getApp()
 Page({
-  data: {
-    img_arr: [],
-    formdata: '',
-  },
-  formSubmit: function(e) {
-    var id = e.target.id
-    adds = e.detail.value;
-    adds.program_id = app.jtappid
-    adds.openid = app._openid
-    adds.zx_info_id = this.data.zx_info_id
-    this.upload()
-  },
 
-  upload: function() {
-    var that = this
-    wx.uploadFile({
-        url: 'https:***/submit',
-        filePath: that.data.img_arr[0],
-        name: 'content',
-        formData: adds,
+  data: {
+    sex: "U",
+    items: [{
+        name: 'M',
+        value: '男',
+        checked: 'true'
+      },
+      {
+        name: 'F',
+        value: '女'
+      },
+    ]
+  },
+  binSaveSex: function(e) {
+    console.log(e.detail.value);
+    wx.request({
+        url: 'http://johnnyzen.cn:8080/forget-words-notebook/updateUserInfo/api ',
+        data: {
+          sex: e.detail.value["sex"]
+        },
+        method: 'POST',
+        header: {
+          'content-type': 'application/x-www-form-urlencoded',
+          'Cookie': 'JSESSIONID=' + wx.getStorageSync('wxSession')
+        },
         success: function(res) {
-          console.log(res)
-          if (res) {
-            wx.showToast({
-              title: '已提交发布！',
-              duration: 3000
-            });
-          }
+          that.setData({ //这里是修改data的值  
+            test: res.data //test等于服务器返回来的数据  
+          });
+          console.log(res.data)
         }
       }),
-      this.setData({
-        formdata: ''
+      wx.navigateTo({
+        url: '../userInfor/userInfor',
       })
   },
-  upimg: function() {
-    var that = this;
-    if (this.data.img_arr.length < 3) {
-      wx.chooseImage({
-        sizeType: ['original', 'compressed'],
-        success: function(res) {
-          that.setData({
-            img_arr: that.data.img_arr.concat(res.tempFilePaths)
-          })
-        }
-      })
-    } else {
-      wx.showToast({
-        title: '最多上传三张图片',
-        icon: 'loading',
-        duration: 3000
-      });
-    }
-  }
+  onLoad: function(options) {
+    this.setData({
+      sex: app.globalData.userInfo.sex,
+    })
+  },
 })
