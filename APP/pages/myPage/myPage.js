@@ -30,6 +30,6 @@ Page({
     })
   },
   getUserInfo: function (e) {
-   
+    
   }
 })
