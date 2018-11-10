@@ -28,7 +28,7 @@
 
 .infor-type {
   color: #333;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .userinfo-avatar {
@@ -38,9 +38,9 @@
 }
 .infor-detail{
   font-size: 14px;
+  margin-right: 10px;
 }
 .detail-arrow{
-  color: #ccc;
   margin-left: -200px;
   margin-right: 5px;
 }
@@ -49,32 +49,29 @@
   height: 100rpx;
 }
 
-.userinfo-nickname {
-  color: #ccc;
-}
+
 
 .userinfo-sex{
-  color: #ccc;
-  margin-left: 40px;
+  margin-left: 35px;
 }
-
-
 
 .userinfo-email {
-  color: #ccc;
-  margin-right: 85px;
+  margin-right: 90px;
 }
 
-.updateInfor{
-  width: 750rpx;
-  height: 100rpx;
-  background-color: #fff;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #2ca1df;
+.detail-arrow,
+.userinfo-nickname,
+.userinfo-sex,
+.userinfo-email,
+.userinfoPassword{
+  color: #ccc;
+  
 }
+
+.password-arrow{
+  margin-left: -320px;
+}
+
+
 
 
