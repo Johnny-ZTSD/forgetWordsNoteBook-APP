@@ -1,50 +1,54 @@
 // pages/userInfor/userInfor.js
+const app = getApp()
 Page({
-
-    /**
-     * 页面的初始数据
-     */
-    data: {
-        userInfo: {
-            avatarUrl: "../../../images/headImg.png",
-            nickName: "千千寰宇",
-            sex: "男",
-            email: "11223344@163.com"
-        },
-    },
-    binChangeAvatar:function(){ //修改头像
-        // wx.navigateTo({
-        //     url: '../chageAvatar/chageAvatar',
-        // })
-    },
-    binChangeNickname: function() { //修改昵称
-        wx.navigateTo({
-            url: '../update/update',
+  data: {
+    avatarUrl: "../../../images/headImg.png",
+    nickName: "wcb",
+    password: "1234567", //虚拟密码
+    sex: "U",
+    email: "1111111@.....",
+  },
+  onLoad: function (options) {
+    //得到本地缓存
+    this.setData({
+      // avatarUrl: app.globalData.userInfo.logoUrl,
+      name: app.globalData.userInfo.username,
+      email: app.globalData.userInfo.email,
+      sex: app.globalData.userInfo.sex,
+    }),
+    wx.setNavigationBarTitle({
+      title: '个人信息',
+    })
+  },
+  onShow:function(){
+    console.log("个人信息"+this.data);
+  },
+  binChangeAvatar: function() { //修改头像
+    var that = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      success: function(res) {
+        var temFilePaths = res.temFilePaths
+        that.setData({
+          imgUrl: temFilePaths
         })
-    },
-    binChangeSex:function(){   //修改性别
-        wx.navigateTo({
-            url: '../chageSex/chageSex',
-        })
-    },
-    binResetPassword:function(){  //修改密码
-        wx.navigateTo({
-            url: '../resetPassword/resetPassword',
-        })
-    },
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad: function(options) {
-        wx.setNavigationBarTitle({
-            title: "个人信息" //页面标题修改为个人信息
-        })
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function() {
-
-    }
+      }
+    })
+  },
+  binChangeNickname: function() { //修改昵称
+    wx.navigateTo({
+      url: '../update/update',
+    })
+  },
+  binChangeSex: function() { //修改性别
+    wx.navigateTo({
+      url: '../chageSex/chageSex',
+    })
+  },
+  binResetPassword: function() { //修改密码
+    wx.navigateTo({
+      url: '../resetPassword/resetPassword',
+    })
+  }
 })
