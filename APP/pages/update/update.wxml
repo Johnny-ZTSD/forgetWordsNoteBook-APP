@@ -2,13 +2,15 @@
 <!--pages/update/update.wxml-->
 <view class='containter'>
   <view class='update-box'>
-    <view class="update-infor">
-      <input class="input-update" name="nickname" value='芊芊寰宇' />
-      <image class='binSave' src='../../../images/save.png'></image>
-    </view>
+    <form bindsubmit="binSave">
+      <view class="update-infor">
+        <input class="input-update" name="nickname" value='{{nickname}}' />
+        <button  form-type="submit" class="updata-button"><image class='binSave' src='../../../images/save.png'></image></button>
+      </view>
+    </form>
     <!-- 提示输入信息 -->
-    <view class='hint'>
+    <!-- <view class='hint'>
       <text>最多包含12个字符或24个英文</text>
-    </view>
+    </view> -->
   </view>
 </view>
