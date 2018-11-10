@@ -14,14 +14,13 @@
   flex-direction: row;
   margin-top:10px; 
   align-items: center;
-  /* justify-content: space-; */
 }
 
 .userinfo {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 500rpx;
+  /* justify-content: space-around; */
+  width: 750rpx;
   margin-left: 5px;
 }
 
@@ -29,13 +28,15 @@
   width: 128rpx;
   height: 128rpx;
   border-radius: 50%;
+  margin-left: 8px;
 }
 
 .infor{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-
+  /* justify-content: space-around; */
+  margin-left: 15px;
+  
 }
 
 .userinfo-name-sex{
@@ -52,6 +53,8 @@
 .sexImg{
   width: 25px;
   height: 25px;
+   margin-left: 5px;
+   margin-top: 5px;
 }
 
 .userinfo-email {
@@ -87,4 +90,6 @@
 .back-box{
   height: 90rpx;
   color: #ea5862;
-}
+} 
+
+
